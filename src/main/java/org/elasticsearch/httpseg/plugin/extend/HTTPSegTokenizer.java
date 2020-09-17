@@ -40,8 +40,11 @@ public class HTTPSegTokenizer extends Tokenizer {
         clearAttributes();
         if (tokenBuffer == null || tokenIndex >= tokenBuffer.size()) {
             String line = bufferReader.readLine();
-            if (line == null||line.length()==0) {
+            if (line == null) {
                 return false;
+            }
+            if(line.length()==0){
+                return true;
             }
             boolean forSearch = true;
             try {
