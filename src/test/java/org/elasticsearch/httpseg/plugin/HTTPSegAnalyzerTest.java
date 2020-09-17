@@ -7,7 +7,7 @@ import org.elasticsearch.httpseg.plugin.extend.HTTPSegAnalyzer;
 import org.junit.Test;
 
 /**
- * @author BD-PC27
+ * @author ZhangSen
  */
 public class HTTPSegAnalyzerTest {
     @Test

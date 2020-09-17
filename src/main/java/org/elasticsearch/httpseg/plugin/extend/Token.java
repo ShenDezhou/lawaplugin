@@ -1,7 +1,7 @@
 package org.elasticsearch.httpseg.plugin.extend;
 
 /**
- * @author BD-PC27
+ * @author ZhangSen
  */
 public class Token {
     public String value;

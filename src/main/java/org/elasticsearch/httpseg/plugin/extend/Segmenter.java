@@ -1,7 +1,7 @@
 package org.elasticsearch.httpseg.plugin.extend;
 
 /**
- * @author BD-PC27
+ * @author ZhangSen
  */
 
 import org.apache.http.HttpStatus;
@@ -54,7 +54,7 @@ public class Segmenter {
     }
 
     public Segmenter(Environment environment) {
-        String core_config = environment.pluginsFile().resolve("httpseg-plugin/config/core.config").toString();
+        String core_config = environment.pluginsFile().resolve("lawa/config/core.config").toString();
         req_url = getPath(core_config, "modelserver");
         debug = getPath(core_config, "debug");
     }

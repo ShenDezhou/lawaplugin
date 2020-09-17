@@ -13,11 +13,11 @@ import java.util.Collections;
 import java.util.Map;
 
 /**
- * @author BD-PC27
+ * @author ZhangSen
  */
 
 public class HTTPSegPlugin extends Plugin implements AnalysisPlugin {
-    public static String PLUGIN_NAME = "analysis-httpseg";
+    public static String PLUGIN_NAME = "analysis-lawa";
 
     public HTTPSegPlugin() {
         super();
@@ -25,11 +25,11 @@ public class HTTPSegPlugin extends Plugin implements AnalysisPlugin {
 
     @Override
     public Map<String,AnalysisModule.AnalysisProvider<TokenizerFactory>> getTokenizers() {
-        return Collections.singletonMap("httpseg-word", HTTPSegTokenizerFactory::new);
+        return Collections.singletonMap("lawa-word", HTTPSegTokenizerFactory::new);
     }
 
     @Override
     public Map<String,AnalysisModule.AnalysisProvider<AnalyzerProvider<? extends Analyzer>>> getAnalyzers(){
-        return Collections.singletonMap("httpseg", HTTPSegAnalyzerProvider::new);
+        return Collections.singletonMap("lawa", HTTPSegAnalyzerProvider::new);
     }
 }

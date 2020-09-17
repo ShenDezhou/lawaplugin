@@ -1,7 +1,7 @@
 package org.elasticsearch.httpseg.plugin.extend;
 
 /**
- * @author BD-PC27
+ * @author ZhangSen
  */
 import org.apache.lucene.analysis.FilteringTokenFilter;
 import org.apache.lucene.analysis.TokenStream;
@@ -18,6 +18,6 @@ public class HTTPSegTokenFilter extends FilteringTokenFilter {
 
     @Override
     protected boolean accept() throws IOException {
-        return termAtt.toString().equals("httpseg");
+        return termAtt.toString().equals("lawa");
     }
 }

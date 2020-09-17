@@ -1,7 +1,7 @@
 package org.elasticsearch.httpseg.plugin.extend;
 
 /**
- * @author BD-PC27
+ * @author ZhangSen
  */
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
