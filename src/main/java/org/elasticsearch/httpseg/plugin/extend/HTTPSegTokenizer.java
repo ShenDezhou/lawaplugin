@@ -43,8 +43,13 @@ public class HTTPSegTokenizer extends Tokenizer {
             if (line == null) {
                 return false;
             }
-            if(line.length()==0){
+            if (line.length() == 0) {
                 return true;
+            }
+            line+="\n";
+            while (bufferReader.ready()) {
+                line += bufferReader.readLine();
+                line+="\n";
             }
             boolean forSearch = true;
             try {
@@ -57,7 +62,7 @@ public class HTTPSegTokenizer extends Tokenizer {
         Token token = tokenBuffer.get(tokenIndex);
         termAtt.append(token.value);
         offsetAtt.setOffset(correctOffset(token.startPos),
-                            correctOffset(token.endPos));
+                correctOffset(token.endPos));
         posIncrAtt.setPositionIncrement(1);
         tokenIndex += 1;
         finalOffset = correctOffset(token.endPos);
