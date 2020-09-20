@@ -24,15 +24,25 @@ import java.util.Properties;
 
 public class Segmenter {
 
-    static String req_url = "http://192.168.4.250:58086/z";
+    static String req_url = "http://192.168.1.6:58086/z";
     static String debug = "false";
 
     public static String getPath(String core_config, String key) {
+        System.out.println(core_config);
         String filePath = null;
         InputStream in = null;
         try {
             Properties properties = new Properties();
-            in = Segmenter.class.getClassLoader().getResourceAsStream(core_config);
+            // read absolute file
+            try {
+                in = new FileInputStream(core_config);
+            } catch (FileNotFoundException e) {
+                in = null;
+            }
+            // read resource file
+            if (in == null) {
+                in = Segmenter.class.getClassLoader().getResourceAsStream(core_config);
+            }
             properties.load(in);
             filePath = properties.getProperty(key);
         } catch (FileNotFoundException e) {
@@ -46,6 +56,7 @@ public class Segmenter {
                 e.printStackTrace();
             }
         }
+        System.out.println(key + ":" + filePath);
         return filePath;
     }
 
@@ -54,7 +65,7 @@ public class Segmenter {
     }
 
     public Segmenter(Environment environment) {
-        String core_config = environment.pluginsFile().resolve("lawa/config/core.config").toString();
+        String core_config = environment.pluginsFile().resolve("lawaplugin/configs/core.config").toString();
         req_url = getPath(core_config, "modelserver");
         debug = getPath(core_config, "debug");
     }

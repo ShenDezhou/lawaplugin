@@ -7,8 +7,8 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>${project.basedir}/config</directory>
-            <outputDirectory>config</outputDirectory>
+            <directory>${project.basedir}/configs</directory>
+            <outputDirectory>configs</outputDirectory>
         </fileSet>
     </fileSets>
 
@@ -19,18 +19,18 @@
             <filtered>true</filtered>
         </file>
         <file>
-            <source>${project.basedir}/src/main/resources/config/</source>
-            <outputDirectory/>
+            <source>${project.basedir}/src/main/resources/configs</source>
+            <outputDirectory>configs</outputDirectory>
             <filtered>true</filtered>
         </file>
         <file>
-            <source>${project.basedir}/src/main/resources/config/core.config</source>
-            <outputDirectory>config/</outputDirectory>
+            <source>${project.basedir}/src/main/resources/configs/core.config</source>
+            <outputDirectory>configs</outputDirectory>
             <filtered>true</filtered>
         </file>
         <file>
-            <source>${project.basedir}/src/main/resources/config/java.policy</source>
-            <outputDirectory>config/</outputDirectory>
+            <source>${project.basedir}/src/main/resources/configs/java.policy</source>
+            <outputDirectory>configs</outputDirectory>
             <filtered>true</filtered>
         </file>
     </files>

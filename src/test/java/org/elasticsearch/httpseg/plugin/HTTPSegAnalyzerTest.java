@@ -4,12 +4,21 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.elasticsearch.httpseg.plugin.extend.HTTPSegAnalyzer;
 
+import org.elasticsearch.httpseg.plugin.extend.HTTPSegAnalyzerProvider;
+import org.elasticsearch.httpseg.plugin.extend.Segmenter;
 import org.junit.Test;
 
 /**
  * @author ZhangSen
  */
 public class HTTPSegAnalyzerTest {
+
+    @Test
+    public void testLoadFile() throws Exception {
+        String val = Segmenter.getPath("config\\core.config","modelserver");
+        System.out.println(val);
+    }
+
     @Test
     public void testAnalyzer() throws Exception {
         HTTPSegAnalyzer analyzer = new HTTPSegAnalyzer();
@@ -35,4 +44,5 @@ public class HTTPSegAnalyzerTest {
         ts.end();
         ts.close();
     }
+
 }

@@ -25,11 +25,11 @@ public class HTTPSegPlugin extends Plugin implements AnalysisPlugin {
 
     @Override
     public Map<String,AnalysisModule.AnalysisProvider<TokenizerFactory>> getTokenizers() {
-        return Collections.singletonMap("lawa-word", HTTPSegTokenizerFactory::new);
+        return Collections.singletonMap("lawa-word", HTTPSegTokenizerFactory::getHTTPSegTokenizerFactory);
     }
 
     @Override
     public Map<String,AnalysisModule.AnalysisProvider<AnalyzerProvider<? extends Analyzer>>> getAnalyzers(){
-        return Collections.singletonMap("lawa", HTTPSegAnalyzerProvider::new);
+        return Collections.singletonMap("lawa", HTTPSegAnalyzerProvider::getHTTPSegAnalyzerProvider);
     }
 }

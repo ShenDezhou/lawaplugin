@@ -31,8 +31,10 @@ modelserver=http://192.168.60.15:58086/z
 ```
 
 -  模型服务启动
+* 模型服务使用了falcon、waitress框架，分词模型使用了lawa. 使用pip即可安装```pip install lawa falcon falcon_cors waitress```.
+    * torch_server.py: https://github.com/ShenDezhou/lawa/blob/master/torch_server.py
+
 ```
-pip install lawa falcon falcon_cors waitress
 #前台启动则使用：
 python torch_server.py
 #需要放后台则使用：
@@ -56,7 +58,8 @@ nohup python torch_server.py &
 【搜索引擎模式】： 在, 中华, 华人, 人民, 共和, 共和国, 中华人民共和国, 境内, 缴纳, 增值, 增值税, 、, 消费, 消费税, 的, 单位, 和, 个人, ，, 为, 城市, 维护, 建设, 税, 的, 纳税, 纳税人, ，, 应当, 依照, 本, 法, 规定, 缴纳, 城市, 维护, 建设, 税, 。
 
 
-#验证插件  
+验证插件
+=======  
 用POST请求ES服务  
 _analyze  
 数据：  
@@ -65,8 +68,15 @@ _analyze
   "analyzer": "lawa"
 }
 
-#插件版本信息  
-lawaplugin |  Elasticsearch |  Lucene
------------|----------------|---------
-lawa 1.0.0|Elasticsearch 6.5.4|Lucene 7.5.0
+
+插件版本信息  
+==========
+ES与Lucene版本对应可从``https://raw.githubusercontent.com/elastic/elasticsearch/(7.9)/buildSrc/version.properties```查看
+Lawaplugin |  Elasticsearch |  Lucene | Release Link |
+-----------|----------------|---------|--------------
+lawa 1.0.0|Elasticsearch 6.5.4|Lucene 7.5.0| 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
+
+
+"C:\Program Files\Java\jdk1.8.0_192\bin\java.exe" -Dmaven.multiModuleProjectDirectory=F:\0-AI\A-BasicCommom\lawaplugin "-Dmaven.home=D:\Program Files\apache-maven-3.6.3" "-Dclassworlds.conf=D:\Program Files\apache-maven-3.6.3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.3\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.3\lib\idea_rt.jar=65044:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.3\bin" -Dfile.encoding=UTF-8 -classpath "D:\Program Files\apache-maven-3.6.3\boot\plexus-classworlds-2.6.0.jar;D:\Program Files\apache-maven-3.6.3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version2020.1.4 -s "D:\Program Files\apache-maven-3.6.3\conf\settings.xml" package
+
 

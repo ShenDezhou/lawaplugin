@@ -23,4 +23,10 @@ public class HTTPSegTokenizerFactory extends AbstractTokenizerFactory{
     public Tokenizer create() {
         return new HTTPSegTokenizer(environment);
     }
+
+    public static HTTPSegTokenizerFactory getHTTPSegTokenizerFactory(IndexSettings indexSettings, Environment env,
+                                                                       String name, Settings settings) {
+        HTTPSegTokenizerFactory tokenizerFactory = new HTTPSegTokenizerFactory(indexSettings, env, name, settings);
+        return tokenizerFactory;
+    }
 }
