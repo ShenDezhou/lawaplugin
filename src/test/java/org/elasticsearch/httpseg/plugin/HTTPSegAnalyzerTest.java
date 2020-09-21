@@ -15,7 +15,7 @@ public class HTTPSegAnalyzerTest {
 
     @Test
     public void testLoadFile() throws Exception {
-        String val = Segmenter.getPath("config\\core.config","modelserver");
+        String val = Segmenter.getPath("configs/core.config","modelserver");
         System.out.println(val);
     }
 

@@ -28,6 +28,7 @@ public class HTTPSegTokenizer extends Tokenizer {
     public HTTPSegTokenizer() {
         this.scanner = new Segmenter();
     }
+
     public HTTPSegTokenizer(Environment environment) {
         this.scanner = new Segmenter(environment);
     }

@@ -19,3 +19,5 @@ target/
 *.docx
 *.iml
 .run/
+
+releases/

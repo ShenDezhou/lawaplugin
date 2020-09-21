@@ -24,7 +24,7 @@ import java.util.Properties;
 
 public class Segmenter {
 
-    static String req_url = "http://192.168.1.6:58086/z";
+    static String req_url = "http://192.168.4.250:58086/z";
     static String debug = "false";
 
     public static String getPath(String core_config, String key) {
