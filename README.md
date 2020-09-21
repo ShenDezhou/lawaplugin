@@ -71,27 +71,27 @@ _analyze
 
 插件版本信息  
 ==========
-ES与Lucene版本对应可从``https://raw.githubusercontent.com/elastic/elasticsearch/(7.9)/buildSrc/version.properties```查看
+ES与Lucene版本对应可从``https://raw.githubusercontent.com/elastic/elasticsearch/(7.9)/buildSrc/version.properties``` 查看
 
 
 Lawaplugin |  Elasticsearch |  Lucene | Release Link |  
 -----------|----------------|---------|--------------|  
-lawa 1.0.0|Elasticsearch 6.5.4 |Lucene 7.5.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)    
-lawa 1.0.0|Elasticsearch 5.0.3 |Lucene 6.2.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)
-lawa 1.0.0|Elasticsearch 5.2.3 |Lucene 6.4.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip) |
-lawa 1.0.0|Elasticsearch 5.4.4 |Lucene 6.5.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 5.5.4 |Lucene 6.6.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 5.6.17 |Lucene 6.6.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 6.0.2 |Lucene 7.0.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 6.2.5 |Lucene 7.2.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 6.4.4 |Lucene 7.4.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 6.5.5 |Lucene 7.5.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 6.7.3 |Lucene 7.7.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 7.0.2 |Lucene 8.0.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 7.2.2 |Lucene 8.0.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 7.4.3 |Lucene 8.2.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 7.5.3 |Lucene 8.3.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 7.7.2 |Lucene 8.5.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
-lawa 1.0.0|Elasticsearch 7.9.2 |Lucene 8.6.2 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0.zip)|
+lawa 1.0.0|Elasticsearch 5.0.2 |Lucene 6.2.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-5.0.2.zip)|
+lawa 1.0.0|Elasticsearch 5.2.2 |Lucene 6.4.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-5.2.2.zip)|
+lawa 1.0.0|Elasticsearch 5.4.3 |Lucene 6.5.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-5.4.3.zip)|
+lawa 1.0.0|Elasticsearch 5.5.3 |Lucene 6.6.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-5.5.3.zip)|
+lawa 1.0.0|Elasticsearch 5.6.16 |Lucene 6.6.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-5.6.16.zip)|
+lawa 1.0.0|Elasticsearch 6.0.1 |Lucene 7.0.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-6.0.1.zip)|
+lawa 1.0.0|Elasticsearch 6.2.4 |Lucene 7.2.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-6.2.4.zip)|
+lawa 1.0.0|Elasticsearch 6.4.3 |Lucene 7.4.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-6.4.3.zip)|
+lawa 1.0.0|Elasticsearch 6.5.4 |Lucene 7.5.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-6.5.4.zip)|
+lawa 1.0.0|Elasticsearch 6.7.2 |Lucene 7.7.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-6.7.2.zip)|
+lawa 1.0.0|Elasticsearch 7.0.1 |Lucene 8.0.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-7.0.1.zip)|
+lawa 1.0.0|Elasticsearch 7.2.1 |Lucene 8.0.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-7.2.1.zip)|
+lawa 1.0.0|Elasticsearch 7.4.2 |Lucene 8.2.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-7.4.2.zip)|
+lawa 1.0.0|Elasticsearch 7.5.2 |Lucene 8.3.0 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-7.5.2.zip)|
+lawa 1.0.0|Elasticsearch 7.7.1 |Lucene 8.5.1 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-7.7.1.zip)|
+lawa 1.0.0|Elasticsearch 7.9.1 |Lucene 8.6.2 | 下载:[1.0.0](https://github.com/ShenDezhou/lawaplugin/releases/download/v1.0.0/lawaplugin-1.0.0-7.9.1.zip)|
+
 
 
