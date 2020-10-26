@@ -15,9 +15,13 @@ public class HTTPSegAnalyzer extends Analyzer {
 
     @Override
     protected TokenStreamComponents createComponents(String filedName) {
-        if(this.environment!=null){
-            return new TokenStreamComponents(new HTTPSegTokenizer(this.environment));
+        if (this.environment!=null) {
+            HTTPSegTokenizer st = new HTTPSegTokenizer(this.environment);
+            st.setCutMode(1); // 1 for smart cut mode.
+            return new TokenStreamComponents(st);
         }
-       return new TokenStreamComponents(new HTTPSegTokenizer());
+        HTTPSegTokenizer st = new HTTPSegTokenizer();
+        st.setCutMode(1);
+        return new TokenStreamComponents(st);
     }
 }

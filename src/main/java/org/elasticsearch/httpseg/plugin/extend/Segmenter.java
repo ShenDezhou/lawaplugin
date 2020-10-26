@@ -105,6 +105,43 @@ public class Segmenter {
 
     }
 
+    // mode =1 for smart cut used for analyzer; mode =0 for search cut used in indexing process
+    public List<Token> tokenize(String sentence, int mode) throws JSONException {
+        List<Token> tokens = new ArrayList<Token>();
+        int start = 0;
+
+        JSONObject jsobj = new JSONObject();
+        jsobj.put("mode", mode);
+        jsobj.put("text", sentence);
+        if (debug == "true") {
+            System.out.println(jsobj.toString());
+        }
+        String result = post(jsobj, req_url);
+        JSONObject outjson = new JSONObject(result);
+        if (debug == "true") {
+            System.out.println(outjson.toString());
+        }
+        JSONArray outarray = outjson.getJSONArray("data");
+        for (int i = 0; i < outarray.length(); i++) {
+
+            JSONObject wordobj = outarray.getJSONObject(i);
+            String word = wordobj.getString("word");
+            String pos;
+            boolean haspos = wordobj.has("pos");
+            if (haspos) {
+                pos = wordobj.getString("pos");
+            } else {
+                pos = "w";
+            }
+
+            tokens.add(new Token(word, pos, start, start + word.length()));
+            start += word.length();
+        }
+
+        return tokens;
+
+    }
+
     public static String post(JSONObject jsonobj, String URL) {
 
         HttpPost post = new HttpPost(URL);

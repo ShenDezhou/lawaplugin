@@ -20,6 +20,7 @@ public class HTTPSegTokenizer extends Tokenizer {
     private List<Token> tokenBuffer;
     private int tokenIndex;
     private int finalOffset;
+    private int cutmode = 0; // 0 search cut; 1 exact cut
 
     private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
     private final OffsetAttribute offsetAtt = addAttribute(OffsetAttribute.class);
@@ -31,6 +32,10 @@ public class HTTPSegTokenizer extends Tokenizer {
 
     public HTTPSegTokenizer(Environment environment) {
         this.scanner = new Segmenter(environment);
+    }
+
+    public setCutMode(int mode) {
+        self.cutmode = mode;
     }
 
     @Override
@@ -54,7 +59,11 @@ public class HTTPSegTokenizer extends Tokenizer {
             }
             boolean forSearch = true;
             try {
-                tokenBuffer = scanner.tokenize(line);
+                if (self.cutmode>0){
+                    tokenBuffer = scanner.tokenize(line, self.cutmode);
+                } else{
+                    tokenBuffer = scanner.tokenize(line);
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
